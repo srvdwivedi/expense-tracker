@@ -1,5 +1,5 @@
 import Expenses from "./Components/Expenses/Expenses";
-import NewExpenseForm from "./Components/NewExpense/NewExpenseForm";
+import NewExpense from "./Components/NewExpense/NewExpense";
 import React, { useState } from "react";
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
   }
   return (
     <div>
-      <NewExpenseForm onAddExpense={onSaveNewExpense} />
+      <NewExpense onAddExpense={onSaveNewExpense} />
       <Expenses expenses={expenseData} />
     </div>
   );
