@@ -6,18 +6,22 @@ import { Card } from 'react-bootstrap';
 import ExpenseFilter from '../ExpenseFilter/ExpenseFilter';
 
 const Expenses = (props) => {
-    // const [expensesData, setExpenses] = useState(expenses);
-    // setExpenses(...expensesData, props.expenses)
+
+const [filterYear,setFilterYear] = useState('2022')
 
     const selectedYear = (year) => {
-        console.log(year)
+        setFilterYear(year)
     }
+
+    const filteredData = props.expenses.filter( (expense) => {
+        return expense.date.getFullYear().toString() === filterYear;
+    });
 
     return (
         <Card className="expenses">
             <ExpenseFilter selectedFilterYear={selectedYear} />
             {
-                props.expenses.map(item => {
+                filteredData.map(item => {
                     return (
                         <ExpenseItem
                             title={item.title}
