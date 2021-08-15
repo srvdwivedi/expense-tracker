@@ -11,6 +11,18 @@ function App() {
       amount: 94.12,
       date: new Date(2020, 7, 14),
     },
+    {
+      id: 'e2',
+      title: 'NewsPaper',
+      amount: 104.12,
+      date: new Date(2021, 7, 14),
+    },
+    {
+      id: 'e3',
+      title: 'Music',
+      amount: 399.12,
+      date: new Date(2022, 7, 14),
+    },
   ];
 
   const [expenseData, setExpenseData] = useState(initialExpenses)
