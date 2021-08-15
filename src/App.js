@@ -31,7 +31,7 @@ function App() {
     setExpenseData([expense, ...expenseData])
   }
   return (
-    <div>
+    <div> 
       <NewExpense onAddExpense={onSaveNewExpense} />
       <Expenses expenses={expenseData} />
     </div>
